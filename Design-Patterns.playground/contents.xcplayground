@@ -3,5 +3,6 @@
     <pages>
         <page name='Abstract Factory Pattern'/>
         <page name='Factory Pattern'/>
+        <page name='Builder Pattern'/>
     </pages>
 </playground>
