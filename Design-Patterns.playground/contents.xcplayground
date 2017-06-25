@@ -4,5 +4,7 @@
         <page name='Abstract Factory Pattern'/>
         <page name='Factory Pattern'/>
         <page name='Builder Pattern'/>
+        <page name='Prototype Pattern'/>
+        <page name='Singleton Pattern'/>
     </pages>
 </playground>
