@@ -6,5 +6,6 @@
         <page name='Builder Pattern'/>
         <page name='Prototype Pattern'/>
         <page name='Singleton Pattern'/>
+        <page name='Adapter Pattern'/>
     </pages>
 </playground>
