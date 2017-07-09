@@ -7,5 +7,6 @@
         <page name='Prototype Pattern'/>
         <page name='Singleton Pattern'/>
         <page name='Adapter Pattern'/>
+        <page name='Bridge Pattern'/>
     </pages>
 </playground>
