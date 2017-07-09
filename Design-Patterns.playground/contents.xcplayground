@@ -9,5 +9,6 @@
         <page name='Adapter Pattern'/>
         <page name='Bridge Pattern'/>
         <page name='Filter Pattern'/>
+        <page name='Composite Pattern'/>
     </pages>
 </playground>
