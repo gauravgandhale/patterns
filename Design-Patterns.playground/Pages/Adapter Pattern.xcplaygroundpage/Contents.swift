@@ -2,6 +2,11 @@ import Foundation
 
 //Adapter Pattern
 
+/**
+ The idea here is OlderGun with DeathStarAiming should adapt the newer NewPrecisionTargetMechanism
+ */
+
+
 protocol DeathStarAiming
 {
     var angleV: NSNumber { get }
@@ -10,19 +15,19 @@ protocol DeathStarAiming
 
 
 //Adaptee
-struct NewPrecisionTargetMechanism: DeathStarAiming
+struct NewPrecisionTargetMechanism
 {
     var angleV: Double
     var angleH: Double
     
     public func fire()
     {
-        print("fire with new (V:\(angleV) & H: \(angleH)) ******* BOOM")
+        print("New Mechanism: \(angleV) and \(angleH)")
     }
 }
 
 //Adapter
-struct SuperGun: DeathStarAiming
+struct OlderGun: DeathStarAiming
 {
     private let targetMechanism: NewPrecisionTargetMechanism
   
@@ -32,13 +37,6 @@ struct SuperGun: DeathStarAiming
     
     var angleH: NSNumber {
         return NSNumber(value: targetMechanism.angleH)
-    }
-    
-    //Old mechanism
-    init(angleV:NSNumber,angleH:NSNumber)
-    {
-        self.angleV = angleV
-        self.angleH = angleH
     }
     
     //New mechanism
@@ -53,12 +51,9 @@ struct SuperGun: DeathStarAiming
 }
 
 
-//Older way of calling
-let superGun = SuperGun(angleV: 10, angleH: 15)
-superGun.fire()
-
-
-//New way of calling. Same super gun adapted new mechanism 
+//Usage
 let newMechanism = NewPrecisionTargetMechanism(angleV: 11.0, angleH: 15.5)
-let superGun2 = SuperGun(newMechanism: newMechanism)
+newMechanism.fire()
+
+let superGun2 = OlderGun(newMechanism: newMechanism)
 superGun2.fire()
