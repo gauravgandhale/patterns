@@ -8,5 +8,6 @@
         <page name='Singleton Pattern'/>
         <page name='Adapter Pattern'/>
         <page name='Bridge Pattern'/>
+        <page name='Filter Pattern'/>
     </pages>
 </playground>
